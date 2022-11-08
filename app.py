@@ -59,35 +59,7 @@ st.dataframe(df.sample(n = 5 , random_state = 1))
 st.subheader("Classes")
 
 
-'''# 2-D PCA
-df = getPCA(df)
-fig = plt.figure(figsize=(16,10))
-sns.scatterplot(
-    x="pca-1", y="pca-2",
-    hue="Type",
-    palette=sns.color_palette("hls", len(classes)),
-    data=df,
-    legend="full"
-)
-plt.xlabel('PCA One')
-plt.ylabel('PCA Two')
-plt.title("2-D PCA Visualization")
-st.pyplot(fig)'''
-'''
-#3-D PCA
-fig2 = plt.figure(figsize=(16,10)).gca(projection='3d')
-fig2.scatter(
-    xs=df["pca-1"],
-    ys=df["pca-2"],
-    zs=df["pca-3"],
-    c=df["Type"],
-)
-fig2.set_xlabel('pca-one')
-fig2.set_ylabel('pca-two')
-fig2.set_zlabel('pca-three')
-plt.title("3-D PCA Visualization")
-st.pyplot(fig2.get_figure())
-'''
+# Train Model
 # Train Model
 model = getClassifier(classifier)
 model.fit(X_train, y_train)
