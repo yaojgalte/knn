@@ -13,6 +13,5 @@ st.title("Diabetes predictor")
 st.subheader("This model will predict if a person would have diabetes or not. "
              "If the intput value is missing, please enter 0.")
 
-Pregnancies = (st.text_input("Gravidity (the number of times that a woman has been pregnant)."))
-Pregnancies = int(Pregnancies)
+Pregnancies = st.number_input("Gravidity (the number of times that a woman has been pregnant).")
 
