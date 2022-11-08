@@ -74,7 +74,7 @@ plt.xlabel('PCA One')
 plt.ylabel('PCA Two')
 plt.title("2-D PCA Visualization")
 st.pyplot(fig)
-
+'''
 #3-D PCA
 fig2 = plt.figure(figsize=(16,10)).gca(projection='3d')
 fig2.scatter(
@@ -88,7 +88,7 @@ fig2.set_ylabel('pca-two')
 fig2.set_zlabel('pca-three')
 plt.title("3-D PCA Visualization")
 st.pyplot(fig2.get_figure())
-
+'''
 # Train Model
 model = getClassifier(classifier)
 model.fit(X_train, y_train)
