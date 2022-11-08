@@ -18,7 +18,7 @@ Glucose = st.number_input("Glucose", step=1)
 BloodPressure = st.number_input("BloodPressure", step=1)
 SkinThickness = st.number_input("SkinThickness", step=1)
 Insulin = st.number_input("Insulin", step=1)
-BMI = st.number_input("BMI")
+BMI = st.number_input("BMI", format="%0.1f")
 DiabetesPedigreeFunction = st.number_input("DiabetesPedigreeFunction", format="%0.3f")
 Age = st.number_input("Age", step=1)
 
