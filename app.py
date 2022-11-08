@@ -60,7 +60,7 @@ st.subheader("Classes")
 for idx, value in enumerate(classes):
     st.text('{}: {}'.format(idx , value))
 
-# 2-D PCA
+'''# 2-D PCA
 df = getPCA(df)
 fig = plt.figure(figsize=(16,10))
 sns.scatterplot(
@@ -73,7 +73,7 @@ sns.scatterplot(
 plt.xlabel('PCA One')
 plt.ylabel('PCA Two')
 plt.title("2-D PCA Visualization")
-st.pyplot(fig)
+st.pyplot(fig)'''
 '''
 #3-D PCA
 fig2 = plt.figure(figsize=(16,10)).gca(projection='3d')
