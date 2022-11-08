@@ -4,3 +4,4 @@ matplotlib-inline==0.1.6
 pandas==1.5.1
 seaborn==0.12.1
 streamlit==1.14.0
+numpy==1.23.4
