@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 #df = pd.read_csv("diabetes.csv")
 
 # title
-st.title("Diabetes predictor")
+st.title("Diabetes predictor", author="yao")
 st.subheader("This model will predict if a person would have diabetes or not. "
              "If the intput value is missing, please enter 0.")
 
