@@ -42,23 +42,22 @@ def return_data(dataset):
     return X_train, X_test, y_train, y_test,df,data.target_names
 
 # Title
-st.title("Classifiers in Action")
+st.title("Title")
 
 # Description
-st.text("Chose a Dataset and a Classifier in the sidebar. Input your values and get a prediction")
+st.text("description")
 
 #sidebar
 sideBar = st.sidebar
-dataset = sideBar.selectbox('Which Dataset do you want to use?',('Wine' , 'Breast Cancer' , 'Iris'))
-classifier = sideBar.selectbox('Which Classifier do you want to use?',('SVM' , 'KNN' , 'Random Forest'))
+dataset = sideBar.selectbox('options?',('A' , 'B' , 'C'))
 
+# info
+classifier = 'Random Forest'
 
 X_train, X_test, y_train, y_test, df , classes= return_data(dataset)
 st.dataframe(df.sample(n = 5 , random_state = 1))
 st.subheader("Classes")
 
-for idx, value in enumerate(classes):
-    st.text('{}: {}'.format(idx , value))
 
 '''# 2-D PCA
 df = getPCA(df)
