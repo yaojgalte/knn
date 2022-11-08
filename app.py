@@ -38,6 +38,7 @@ def predict_diabetes(input):
     for i in range(1, 7):
         if input[i] == 0:
             input[i] = np.nan
-    st.subheader("The prediction is {}.".format(model.predict([input])[0]))
+    return
+    st.subheader("The prediction is {}.".format(loaded_model.predict([input])[0]))
 
 predict_diabetes(input)
