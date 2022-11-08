@@ -9,17 +9,19 @@ import matplotlib.pyplot as plt
 # title
 st.title("Diabetes predictor")
 st.text("Made by Yao J. Galteland")
-st.subheader("This model will predict if a person would have diabetes or not. "
+st.subheader("This model will predict if the patient would have diabetes or not (1 = yes, 0 = no). "
              "If the intput value is missing, please enter 0.")
 
 # input
-Pregnancies = st.number_input("Gravidity", step=1, help="the number of times that a woman has been pregnant")
-Glucose = st.number_input("Glucose", step=1)
-BloodPressure = st.number_input("BloodPressure", step=1)
-SkinThickness = st.number_input("SkinThickness", step=1)
-Insulin = st.number_input("Insulin", step=1)
-BMI = st.number_input("BMI", format="%0.1f")
-DiabetesPedigreeFunction = st.number_input("DiabetesPedigreeFunction", format="%0.3f")
+Pregnancies = st.number_input("Pregnancies", step=1, help="indicates the number of pregnancies")
+Glucose = st.number_input("Glucose", step=1, help="indicates the plasma glucose concentration")
+BloodPressure = st.number_input("Blood Pressure", step=1, help="indicates diastolic blood pressure in mm/Hg")
+SkinThickness = st.number_input("Skin Thickness", step=1, help="indicates triceps skinfold thickness in mm")
+Insulin = st.number_input("Insulin", step=1, help="indicates insulin in U/mL")
+BMI = st.number_input("BMI", format="%0.1f", help="indicates the body mass index in kg/m2")
+DiabetesPedigreeFunction = st.number_input("Diabetes Pedigree Function", format="%0.3f",
+                                           help="indicates the function which scores likelihood of "
+                                                "diabetes based on family history")
 Age = st.number_input("Age", step=1)
 
 input = [Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]
