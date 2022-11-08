@@ -10,10 +10,10 @@ import matplotlib.pyplot as plt
 st.title("Diabetes predictor")
 st.text("Made by Yao J. Galteland")
 st.subheader("This model will predict if the patient would have diabetes or not (1 = yes, 0 = no). "
-             "The accuracy of our model is 99.8%. "
+             "The accuracy of our model is 97%. "
              "If the intput value is missing, please enter 0.")
 
-# input
+# user input
 Pregnancies = st.number_input("Pregnancies", step=1, help="indicates the number of pregnancies")
 Glucose = st.number_input("Glucose", step=1, help="indicates the plasma glucose concentration")
 BloodPressure = st.number_input("Blood Pressure", step=1, help="indicates diastolic blood pressure in mm/Hg")
@@ -27,18 +27,19 @@ Age = st.number_input("Age", step=1)
 
 input = [Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]
 
+# Use machine learning model to predict diabetes
 import pickle
 import numpy as np
 
 # load the model from disk
 filename = 'finalized_model.pkl'
-
 loaded_model = pickle.load(open(filename, 'rb'))
 
 def predict_diabetes(input):
     for i in range(1, 7):
         if input[i] == 0:
             input[i] = np.nan
-    st.subheader("The prediction is {}.".format(loaded_model.predict([input])[0]))
+    return loaded_model.predict([input])[0]
 
-predict_diabetes(input)
+# output the prediction
+st.subheader("The prediction is {}.".format(predict_diabetes(input)))
