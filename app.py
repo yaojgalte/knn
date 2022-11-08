@@ -9,10 +9,13 @@ import matplotlib.pyplot as plt
 #df = pd.read_csv("diabetes.csv")
 
 # title
-st.title("Diabetes predictor", author="yao")
+st.title("Diabetes predictor")
+st.header("header")
 st.subheader("This model will predict if a person would have diabetes or not. "
              "If the intput value is missing, please enter 0.")
-
+st.caption("cap")
+st.code("code")
+st.text("text")
 Pregnancies = st.number_input("Gravidity", step=1, help="the number of times that a woman has been pregnant")
 Glucose = st.number_input("Glucose", step=1)
 BloodPressure = st.number_input("BloodPressure", step=1)
